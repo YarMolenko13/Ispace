@@ -191,6 +191,7 @@ $(document).ready(function () {
 	// call
 	$('.call-popup').click(function (e) {
 		e.preventDefault();
+		$('html').css('overflow-y', 'hidden');
 		$('body').css('overflow-y', 'hidden');
 		$('.header-popup').css({ display: 'flex' });
 		$('.header-popup').fadeIn();
@@ -199,6 +200,7 @@ $(document).ready(function () {
 		// }
 		$('.header-popup__close').click(function (e) {
 			$('body').css({ "overflow": "scroll" });
+			$('html').css({ "overflow": "scroll" });
 			$('.header-popup').css({ display: 'none' });
 			$('.header-popup').fadeOut();
 		})
@@ -223,6 +225,7 @@ $(document).ready(function () {
 	$('.works-popup-link').click(function (e) {
 		e.preventDefault();
 		$('.menu-header__body').fadeOut();
+		$('html').css('overflow-y', 'hidden');
 		$('body').css('overflow-y', 'hidden');
 		$('.works-popup').css({ display: 'flex' });
 		// if ($(window).innerWidth() <= 950) {
@@ -231,7 +234,7 @@ $(document).ready(function () {
 		$('.works-popup__close').click(function (e) {
 			$('.works-popup').css({ display: 'none' });
 			$('body').css({ "overflow": "scroll" });
-
+			$('html').css('overflow-y', 'sroll');
 		})
 	})
 	// services
